@@ -61,7 +61,7 @@ About the Arduino sketch
 ------------------------
 To see the messages in HEX code format on the serial monitor, set the debug variable to true. Due to limitations (in the processor or in my code), about 1% of the messages are lost. I believe this to be a "time battle" between the TCP protocol and the Arduino code, and to be of little importance to this application.
 
-The webpage uses only one variable per data field, the fields on the webpage show the most recent value available. The last message type that was read is shown on the page in red typing. To get the latest data, refresh the page.
+The webpage uses only one variable per data field, the fields on the webpage show the most recent value available. The last message type that was read is shown on the page in red typing. To get the latest data, refresh the page by clicking one of the relay control Update / Send buttons.
 
 To connect from the outside world, you need to forward port 80 in your router to the IP address of ESP8266 / NodeMCU. The sketch allows NodeMCU to be assigned an IP address from the DHCP pool of the houme router. Given that the board is mostly running continously, and the lease time is set to one or two days (recommended), it will rarely get a new IP address. So port forwarding to one address should not be a problem. 
 

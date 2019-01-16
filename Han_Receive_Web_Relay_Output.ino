@@ -62,8 +62,8 @@
 #define INPIN1     D3               // GPIO0
 
 // WiFi details
-static const char ssid[] = "Bandit12";
-static const char password[] = "kS2548e19";
+static const char ssid[] = "Your_ssid";
+static const char password[] = "Your_password";
 
 // Create variables
 String Do0 = "<font color=\"black\"><b>Off</b></font>"; // Indication startup default
