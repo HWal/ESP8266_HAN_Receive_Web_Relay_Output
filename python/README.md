@@ -1,9 +1,9 @@
 # MAIN README
 
-This repository will be upgraded for Python 3 in the future.
+The programs in this folder will be upgraded for Python 3 in the future.
 
-About the programs in this repository
-=====================================
+About the programs
+==================
 * Create log files with AMS data logged from the HAN port on Kaifa (MA304H3E) electricity meter.
 * Save the files to disk on PC.
 * Present the log data graphically with the Python matplotlib module.
