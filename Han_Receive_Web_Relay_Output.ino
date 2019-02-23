@@ -64,6 +64,9 @@
 // WiFi details
 static const char ssid[] = "Your_ssid";
 static const char password[] = "Your_password";
+IPAddress ip(192, 168, 10, 95);     // The desired IP Address
+IPAddress gateway(192, 168, 10, 1); // Gateway to match your network
+IPAddress subnet(255, 255, 255, 0); // Subnet mask to match your network
 
 // Create variables
 String Do0 = "<font color=\"black\"><b>Off</b></font>"; // Indication startup default
@@ -440,7 +443,10 @@ void setup() {
   }
 
   WiFi.mode(WIFI_STA); // Station mode
-  
+
+  // Set ip outside of DHCP in home router
+  WiFi.config(ip, gateway, subnet);
+
   WiFi.begin (ssid, password);
   // Wait for connection
   while ( WiFi.status() != WL_CONNECTED ) {
