@@ -5,10 +5,10 @@ The programs in this folder will be upgraded for Python 3 in the future.
 About the programs
 ==================
 * Create log files with AMS data logged from the HAN port on Kaifa (MA304H3E) electricity meter.
-* Save the files to disk on PC.
+* Save the files to disk.
 * Present the log data graphically with the Python matplotlib module.
 
-There is no "pretty" user interface. To configure where to store the data, and the log frequency, you need to manually edit the source files.
+There is no "pretty" user interface. To configure where to store the data, and the log frequency, you need to manually edit the source file parse_write.py.
 
 Get started (Windows 10)
 ------------------------
@@ -26,19 +26,29 @@ backports.functools-lru-cache 1.5, beautifulsoup4 4.7.1, cycler 0.10.0, html5lib
 
 If some package is missing in your list, you can install it with this command: pip install <package name>
 
+You should now have all needed packages to log data and view them on PC. However, it is probably better to use another computer to save the log files. For this purpose I bought a Raspberry Pi Model 3 B+. I control it from the PC in "Headless" mode (without keyboard/mouse/monitor). To do the job I suggest the applications PuTTY, pscp and VNC. All are free to download from the internet.
+
+Get started (Raspberry Pi with Raspbian Stretch)
+------------------------------------------------
+First, get the Pi up and running with a monitor.
+Enable VNC server with sudo raspi-config -> Interfacing Options -> VNC
+Enable SSH with sudo raspi-config -> Interfacing Options -> SSH
+Go here: https://geoffboeing.com/2016/03/scientific-python-raspberry-pi/ and perform steps 1 to 6.
+
 Logging AMS data to file:
 -------------------------
-* Create a folder, preferable named "Logs" at a location of your choice.
-* Open the file parse_write.py with the IDLE editor, and change line 16 to contain the path to your chosen folder.
-* To prevent the program from running forever, edit line 21 to set the maximum number of recordings.
-* Start the program with f5. Datalogging should now start, on a file named the current YYYY-MM-DD.
-* When the date changes, a new log file should be generated, with name equal to the new current date.
-* Stop the logging with ctrl + f6.
+* Create a directory on the Pi for the Python program and logs.
+* Open parse_write.py with the IDLE editor.
+* Edit the variable folderName to contain the path to your chosen folder.
+* Start the program from terminal with command python parse_write.py
+* Datalogging should now start, on a file named the current YYYY-MM-DD.
+* When the date changes, a new log file is be generated, with name equal to the new current date.
+* Stop logging with ctrl + f6.
 
 Plot the recorded data:
 -----------------------
-* Open the file main_prog_en.py (or main_prog_no.py) in the IDLE editor.
-* Change line 103 to contain the path to your chosen folder.
+* On the PC, open main_prog_en.py (or main_prog_no.py) in the IDLE editor.
+* Edit the variable folder to contain the path to your chosen folder.
 * Start the program with f5. An entry window should appear.
 * Check that the path to the log files is the correct one.
 * Select up to two dates, and which graphs you want to be shown, then click Ok.
