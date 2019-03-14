@@ -38,11 +38,11 @@ Go here: https://geoffboeing.com/2016/03/scientific-python-raspberry-pi/ and per
 Logging AMS data to file:
 -------------------------
 * Create a directory on the Pi for the Python program and logs.
-* Open parse_write.py with the IDLE editor.
-* Edit the variable folderName to contain the path to your chosen folder.
-* Start the program from terminal with command python parse_write.py
+* Open parse_write.py in the IDLE editor.
+* Edit the variable folderName, to contain the path to your chosen folder.
+* Start the program from terminal by entering: python parse_write.py
 * Datalogging should now start, on a file named the current YYYY-MM-DD.
-* When the date changes, a new log file is be generated, with name equal to the new current date.
+* When the date changes a new log file is generated, with name equal to the new current date.
 * Stop logging with ctrl + f6.
 
 Plot the recorded data:
