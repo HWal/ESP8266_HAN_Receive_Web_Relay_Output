@@ -5,7 +5,7 @@ HAN reader for ESP8266 12E
 
 This program for Arduino has the following functions:
 * Read and decode data from the HAN-port on a Kaifa (MA304H3E 3-phase) smart electricity meter. It also reads data from Kaifa 1-phase meter, but this is not tested.
-* Present data on a simple webpage.
+* Present data on a simple webpage, where the ESP8266 contains the webserver.
 * Control two output relays.
 * Send notification to mobile phone via the IFTTT service when the active power exceeds a user defined limit.
 
@@ -20,13 +20,13 @@ Hardware
 
 Required software
 -----------------
-The sketch "HAN_Receive_Double_Command.ino", the COM/serial driver for the USB to serial chip, and the necessary Arduino libraries (see below)
+The sketch "Han_Receive_Web_Relay_Output.ino", the COM/serial driver for the USB to serial chip, and the necessary Arduino libraries (see below)
 
 Get started (Windows 10)
 ------------------------
 Install the latest Arduino for Windows from here: https://www.arduino.cc/en/Main/Software (should be 1.6.7 or newer).
 
-Install Python 2.7 which can be found here: https://www.python.org/ . During the install, remember to check the option that adds path to Python 2.7 to the environment variables.
+Install Python 2.7 which can be found here: https://www.python.org/ . During the install, remember to check the option that adds the path to Python 2.7 to the environment variables. More about the Python programs at the bottom of this page.
 
 Configure the Arduino application
 ---------------------------------

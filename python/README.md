@@ -26,13 +26,14 @@ backports.functools-lru-cache 1.5, beautifulsoup4 4.7.1, cycler 0.10.0, html5lib
 
 If some package is missing in your list, you can install it with this command: pip install <package name>
 
-You should now have all needed packages to log data and view them on PC. However, it is probably better to use another computer to save the log files. For this purpose I bought a Raspberry Pi Model 3 B+. I control it from the PC in "Headless" mode (without keyboard/mouse/monitor). To do the job I suggest the applications PuTTY, pscp and VNC. All are free to download from the internet.
+You should now have all needed packages to log data to file and view them on PC. However, it is probably better to use another computer to save the log files. For this purpose I bought a Raspberry Pi Model 3 B+. I control it from the PC in "Headless" mode (without keyboard/mouse/monitor). To do the job I suggest the applications PuTTY, pscp and VNC. All are free to download from the internet.
 
 Get started (Raspberry Pi with Raspbian Stretch)
 ------------------------------------------------
 First, get the Pi up and running with a monitor.
 Enable VNC server with sudo raspi-config -> Interfacing Options -> VNC
 Enable SSH with sudo raspi-config -> Interfacing Options -> SSH
+
 Go here: https://geoffboeing.com/2016/03/scientific-python-raspberry-pi/ and perform steps 1 to 6.
 
 Logging AMS data to file:
