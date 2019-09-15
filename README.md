@@ -26,8 +26,6 @@ Get started (Windows 10)
 ------------------------
 Install the latest Arduino for Windows from here: https://www.arduino.cc/en/Main/Software (should be 1.6.7 or newer).
 
-Install Python 2.7 which can be found here: https://www.python.org/ . During the install, remember to check the option that adds the path to Python 2.7 to the environment variables. More about the Python programs at the bottom of this page.
-
 Configure the Arduino application
 ---------------------------------
 Start the Arduino application.
@@ -69,5 +67,3 @@ I found that using the serial port (UART0) on ESP8266 is the best solution for c
 UART0 is connected physically to the USB/serial chip on the board, and also to the pins marked TX/RX on the board. By connecting the TTL signal directly to the RX pin on NodeMCU, there will be a port collision. So, in the setup() function, Serial.swap() is called to move TX from GPIO1/TX/D10 to GPIO15/D8 and RX from GPIO3/RX/D9 to GPIO13/D7. Now TTL from the meter can be connected to GPIO13, and there will be no collision.
 
 Explaining how to configure IFTTT (IF This Then That) on the IFTTT site is outside the scope of this Readme, but it is quite easy to get working if you spend a little time looking into it.
-
-In the python folder you will find programs for logging data to disk, and presenting these data in graphs. See the Readme file in that folder.
